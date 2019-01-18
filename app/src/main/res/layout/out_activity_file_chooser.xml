@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f0f0f0"
+    android:orientation="horizontal" >
+
+    <RelativeLayout
+        android:id="@+id/layoutTitleBar"
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        android:background="#0082f0" >
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dip"
+            android:src="@drawable/selector_btn_back" />
+
+        <TextView
+            android:id="@+id/tvBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"		
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/btnBack"
+            android:gravity="center"
+            android:text="返回"
+            android:textColor="@color/text_color_white_normal"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="选择外部数据文件"
+            android:textColor="@color/text_color_white_normal"
+            android:textSize="20sp" />
+		
+    </RelativeLayout>
+
+   
+
+
+    <ListView
+        android:id="@+id/lvFileChooser"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/llFileLimit"
+        android:layout_below="@id/layoutTitleBar"
+        android:clickable="true"
+        android:divider="@color/color_gray"
+        android:dividerHeight="1px"
+        android:scrollbars="none" />
+
+    <LinearLayout
+        android:id="@+id/tvEmptyHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="gone" >
+        <ImageView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/icon_file_empty"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="没有文件"
+            android:textSize="16sp"
+            android:textStyle="bold" >
+        </TextView>
+    </LinearLayout>
+
+</RelativeLayout>
